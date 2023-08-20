@@ -1,0 +1,20 @@
+def removedSum(N, M, A):
+    # Sort each row in descending order
+    for i in range(N):
+        A[i].sort(reverse=True)
+    
+    # Calculate the sum of the first M elements from each row
+    row_sums = [sum(A[i][:M]) for i in range(N)]
+    
+    # Find the maximum possible sum across all rows
+    result = max(row_sums)
+    
+    return result
+
+# Read input
+N, M = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(N)]
+
+# Calculate and print the maximum possible sum of removed elements
+result = removedSum(N, M, A)
+print(result)

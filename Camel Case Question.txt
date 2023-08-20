@@ -1,0 +1,31 @@
+Strings : Camel Case
+An important aspect of object-oriented programming is the readability of the code.
+To enhance the readability of code, developers write function and variable names in the Camel case.
+Steve gave you a string, S, written in the Camel case.
+
+Write a program to print all the words present in the string in the same order as they appear.
+
+Function Description
+In the provided code snippet, implement the provided camelCase(...) method using the variables to print words present in the string in the order in which they appear in the string. You can write your code in the space below the phrase "WRITE YOUR LOGIC HERE"
+
+There will be multiple test cases running so the input and Output should match exactly as provided.
+The base output variable result is set to a default value of -404 which can be modified. Additionally, you can add or remove these output variables.
+
+Input Format
+The Only line contains a single line as a string.
+
+Sample input
+HeyThereIAmGood   --denotes string S
+
+Constrains
+S <=1000
+
+Output Format
+The output contains strings on a new line denoting the words present in the string in which they appear in the string.
+
+Sample Output
+Hey
+There
+I
+Am
+Good

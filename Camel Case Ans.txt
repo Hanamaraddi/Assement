@@ -1,0 +1,24 @@
+def camelCase(s):
+    result = []
+    current_word = ''
+    
+    for char in s:
+        if char.isupper():
+            if current_word:
+                result.append(current_word)
+            current_word = char
+        else:
+            current_word += char
+    
+    if current_word:
+        result.append(current_word)
+    
+    return result
+
+# Read input string
+input_string = input().strip()
+
+# Call the camelCase function and print the output
+output = camelCase(input_string)
+for word in output:
+    print(word)

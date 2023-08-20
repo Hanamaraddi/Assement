@@ -1,0 +1,32 @@
+Array Operation : Longest Subarray
+You are given an array of N numbers
+A subarray is a continuous segment of elements in an array
+The Fibonacci series is mathematically defines as:
+
+Find the length of the longest subarray that consists only of Fibonacci numbers .
+
+Notes
+The first few Fibonacci number are 0, 1, 1, 2, 3, 5, 8, 13, 21 ,..., and so on
+A subarray is a contiguous part of the array.
+As Fibonacci numbers can be very large, the input will contain
+Fibonacci numbers less than 10000
+
+Function Description
+In the provided code snippet implement the
+provided longestSubarray(...) method using the variables to print the length of longest subarray that consists only of Fibonacci numbers. You can write your code in the space below the phrase "WRITE YOUR LOGIC HERE".
+There will be multiple test cases running. so the input and Output should match exactly as provided.
+The base Output variable result is set to a default value of -404, which can be modified Additionally, you can add or remove these output variables.
+
+Input format
+The first line contains a number N, denoting the length of the array A. 
+The second line contains N space-separated numbers of array A.
+
+sample input
+6                   -------  denotes N
+4 6 0 0 1 8 -------  A[i]
+
+Output Format
+The output contains an integer denoting the length of the longest subarray that consists only of Fibonacci numbers
+
+Sample Output
+4

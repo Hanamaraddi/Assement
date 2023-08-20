@@ -1,0 +1,26 @@
+def longestSubarray(N, A):
+    result = 0
+    i = 0
+
+    def is_fibonacci(n):
+        fib = [0, 1]
+        while fib[-1] < n:
+            fib.append(fib[-1] + fib[-2])
+        return n in fib
+
+    while i < N:
+        j = i
+        while j < N and is_fibonacci(A[j]):
+            j += 1
+        result = max(result, j - i)
+        i = j + 1
+    
+    return result
+
+# Read input
+N = int(input())
+A = list(map(int, input().split()))
+
+# Calculate and print the result
+result = longestSubarray(N, A)
+print(result)
