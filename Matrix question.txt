@@ -1,0 +1,38 @@
+A Matrix A of size N*N is Given where each element is a positive integer
+You need to perform the following operations on the matrix M times:
+Select any one row of this matrix and remove either the first or the last element from this row
+If You remove the first element then the second element becomes the first element and similarly if we remove all the elements except the last, then the last element becomes the first element.
+Once an element is removed you cannot add it back.
+Print the maximum possible sum of the removed elements.
+Function Description
+In the Provided code snippet, implement the provided removedSum(...) method using the variables to print the maximum possible sum of the removed elements you can write your code in the space below the phrase "WRITE YOUR LOGIC HERE"
+There will be multiple test cases running so the input and Output should match exactly as provided the base Output variable result is set to a default value of -404 which can be modified. Additionally, you can add or remove these output variables.
+
+Input Format
+The first line contains two space-separated integers N and M, denoting the dimension of the matrix and the number of elements to remove respectively.
+This is followed by N lines, each containing N space-separated integers of matrix A.
+A11 A12 A13 ...A1N
+------
+-------
+AN1 AN2....ANN
+
+Sample Input
+2 3
+3 7
+4 1
+
+Constraints
+1<=N<=100, 1<=M<=10000,M<=N*N
+1<=A1j <= 100
+
+Output Format
+The output contains an integer denoting the maximum possible sum of the removed elements
+
+Sample Output
+14
+
+Explanation
+M = 3
+We can remove elements in this sequence: 7,4,3
+This will result in a sum = 14
+Hence the output is 14

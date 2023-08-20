@@ -1,23 +1,31 @@
 def longestSubarray(N, A):
-    result = 0
-    i = 0
-
-    def is_fibonacci(n):
-        fib = [0, 1]
-        while fib[-1] < n:
-            fib.append(fib[-1] + fib[-2])
-        return n in fib
-
-    while i < N:
-        j = i
-        while j < N and is_fibonacci(A[j]):
-            j += 1
-        result = max(result, j - i)
-        i = j + 1
+    def is_fibonacci(num, fib_set):
+        a, b = 0, 1
+        while b <= num:
+            if b == num:
+                return True
+            a, b = b, a + b
+        return False
     
-    return result
+    fib_set = set()
+    a, b = 0, 1
+    while b < 10000:
+        fib_set.add(b)
+        a, b = b, a + b
 
-# Read input
+    max_length = 0
+    current_length = 0
+
+    for num in A:
+        if num in fib_set:
+            current_length += 1
+            max_length = max(max_length, current_length)
+        else:
+            current_length = 0
+
+    return max_length
+
+# Input
 N = int(input())
 A = list(map(int, input().split()))
 
